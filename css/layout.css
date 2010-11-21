@@ -43,6 +43,7 @@ body {
   list-style-type: none;
   font-size: 1.1em;
   line-height: normal;
+  text-transform: lowercase;
 }
 .primary-nav li a {
   text-decoration: none;
