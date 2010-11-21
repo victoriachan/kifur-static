@@ -1,70 +1,168 @@
-/* base.css, part of YUI's CSS Foundation */
+body {
+  color: #333;
+  font-size:100%; 
+  line-height:28px;
+}
+
+html{
+  /* fixes problem with bg image not appearing at bottom on short pages */
+  min-height: 100%; 
+  height: auto;
+  position:relative;
+}
+body, caption, th, td, input, textarea, select, option, legend, fieldset
+{
+  font-family: Georgia, "Times New Roman", "Bitstream Vera Serif", serif;
+}
+
+/** headings **/
+.site-name {
+  font-family: 'Vollkorn', 'Arial black', Arial, sans-serif;
+  font-weight: bold;
+  font-size: 1.8em;
+  letter-spacing:0.01em;
+  line-height: normal;
+}
 h1 {
-	/*18px via YUI Fonts CSS foundation*/
-	font-size:138.5%;  
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 2.5em;
+  line-height: 1.3em;
+  margin:15px 0;
+  padding:0;
 }
 h2 {
-	/*16px via YUI Fonts CSS foundation*/
-	font-size:123.1%; 
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-weight: normal;
+  font-size: 1.5em;
+  line-height: 1.3em;
+  margin:15px 0;
+  padding:0;
 }
 h3 {
-	/*14px via YUI Fonts CSS foundation*/
-	font-size:108%;  
+  font-family: Georgia, "Times New Roman", Times, serif;
+  font-size: 1.2em;
+  line-height: 1.3em;
+  margin:15px 0;
+  padding:0;
+  font-weight: bold;
 }
-h1,h2,h3 {
-	/* top & bottom margin based on font size */
-	margin:1em 0;
+
+h4, h5, h6 {
+  font-size: 1.1em;
+  line-height: 1.3em;
+  margin-top: 0.909em; /* Equivalent to 1em in the page's base font: 1 / 1.1 = 0.909 */
+  margin-bottom: 0.909em;
+  padding:0;
 }
-h1,h2,h3,h4,h5,h6,strong {
-	/*bringing boldness back to headers and the strong element*/
-	font-weight:bold; 
+
+/** block-level elements **/
+p, ul, ol, dl, pre, table, fieldset, blockquote
+{
+  margin: 0.5em 0;
+  padding:0;
 }
-abbr,acronym {
-	/*indicating to users that more info is available */
-	border-bottom:1px dotted #000;
-	cursor:help;
-} 
-em {
-	/*bringing italics back to the em element*/
-	font-style:italic;
+
+/** lists **/
+ul, ol {
+  margin-left: 0;
+  padding-left: 2em;
+  list-style-position:outside;
 }
-blockquote,ul,ol,dl {
-	/*giving blockquotes and lists room to breath*/
-	margin:1em;
-}
-ol,ul,dl {
-	/*bringing lists on to the page with breathing room */
-	margin-left:2em;
+
+ul          { list-style-type: disc; }
+ul ul       { list-style-type: circle; }
+ul ul ul    { list-style-type: square; }
+ul ul ul ul { list-style-type: circle; }
+ol          { list-style-type: decimal; }
+ol ol       { list-style-type: lower-alpha; }
+ol ol ol    { list-style-type: decimal; }
+
+li {
+  margin: 0;
+  padding: 0;
 }
 ol li {
-	/*giving OL's LIs generated numbers*/
-	list-style: decimal outside;	
+  list-style-type: decimal; 
+  list-style-image: none;
 }
-ul li {
-	/*giving UL's LIs generated disc markers*/
-	list-style: disc outside;
+
+dl { }
+  dt {
+    margin: 0;
+    padding: 0;
+  }
+  dd {
+    margin: 0 0 0 2em;
+    padding: 0;
+  }
+  
+/** links **/
+  /* The order of link states are based on Eric Meyer's article:
+   * http://meyerweb.com/eric/thoughts/2007/06/11/who-ordered-the-link-states
+   */
+.default-link,
+a {
+  color:#222;
+  text-decoration:underline;
 }
-dl dd {
-	/*giving UL's LIs generated numbers*/
-	margin-left:1em;
+  a:hover,
+  a:focus {
+    text-decoration:none;
+  }
+  a:active {
+  }
+
+/** tables **/
+  /* Override Drupal default CSS */
+table {
+  border-collapse: collapse;
+  /* width: 100%; */ /* Prevent cramped-looking tables */
 }
-th,td {
-	/*borders and padding to make the table readable*/
-	border:1px solid #000;
-	padding:.5em;
+
+th,
+thead th,
+tbody th {
+  text-align: left;
+  padding-right: 0;
+  border-bottom: none;
 }
-th {
-	/*distinguishing table headers from data cells*/
-	font-weight:bold;
-	text-align:center;
+
+tbody {
+  border-top: none;
 }
-caption {
-	/*coordinated marking to match cell's padding*/
-	margin-bottom:.5em;
-	/*centered so it doesn't blend in to other content*/
-	text-align:center;
+
+/** abbreviations **/
+abbr {
+  border-bottom: 1px dotted #666;
+  cursor: help;
+  white-space: nowrap;
 }
-p,fieldset,table {
-	/*so things don't run into each other*/
-	margin-bottom:1em;
+
+  /* Date-based "abbreviations" show computer-friendly timestamps which are not
+     human-friendly. */
+abbr.created {
+  border: none;
+  cursor: auto;
+  white-space: normal;
+}
+
+img {
+  border: 0;
+}
+
+hr {
+  height: 1px;
+  border: 1px solid #666;
+}
+
+form {
+  margin: 0;
+  padding: 0;
+}
+
+fieldset {
+  margin: 1em 0;
+  padding: 0.5em;
+  border:0;
 }

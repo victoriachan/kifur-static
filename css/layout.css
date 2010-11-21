@@ -1,1 +1,18 @@
 /* Site layout styles */
+
+body {
+ background: #f4f4f4 url('/static/images/bg_lines.png') 50% 0 repeat-y; 
+}
+#site-wrapper{ 
+  margin: 0 auto;
+  padding: 0;
+  width: 924px;
+}
+
+/* Temporary dev styles */
+#dev {
+  border: 1px dashed #ccc;
+  padding: 1em;
+  margin: 1em 0;
+  background-color: #fff;
+}
